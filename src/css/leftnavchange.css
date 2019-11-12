@@ -1,0 +1,44 @@
+.leftchangeitem{
+	border-bottom: 1px solid #eee;
+}
+.change-title{
+	font-size: 24px;
+	line-height: 60px;
+	font-family: fantasy;
+}
+
+.change-items{
+	padding: 0;
+	display: none;
+	transition: all 1s ease;
+}
+
+.change-items li{
+	font-size: 16px;
+	line-height: 30px;
+	margin: 5px 0;
+	padding: 0 0 0 10px;
+}
+
+.change-items li:hover{
+	border-left: 5px solid #080808;
+	font-size: 18px;
+	background-color: #ebebeb;
+}
+
+
+.lefttoflex{
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	min-width: 200px;
+	box-shadow: 0 0 10px 0 #ddd;
+}
+.lefttoflex::-webkit-scrollbar{
+	width: 1px;
+}
+
+/* #left::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+} */

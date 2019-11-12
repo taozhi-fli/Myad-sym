@@ -1,0 +1,24 @@
+body,html,h1,h2,h3,h4,h5,h6,img,div,form,ul,li,ol,dt,dl,dd{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+.left-main-flex{
+	display: flex;
+	
+}
+
+.leftdiy{
+	font-size: 14px;
+}
+
+.leftdiy a:hover{
+	text-decoration: none;
+}
+
