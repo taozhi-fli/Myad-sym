@@ -27,6 +27,11 @@ const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpack
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const eslint = require('eslint');
 
+// 自己加的 
+// function resolve (dir) {
+//   return path.join(__dirname, '..', dir)
+// } 
+
 const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
@@ -301,6 +306,7 @@ module.exports = function(webpackEnv) {
         .map(ext => `.${ext}`)
         .filter(ext => useTypeScript || !ext.includes('ts')),
       alias: {
+				'@src':path.resolve(__dirname,'../src'),
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
@@ -310,6 +316,7 @@ module.exports = function(webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
+				// '@':resolve('src')
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -661,7 +668,21 @@ module.exports = function(webpackEnv) {
           formatter: isEnvProduction ? typescriptFormatter : undefined,
         }),
     ].filter(Boolean),
-    // Some libraries import Node modules but don't use them in the browser.
+//     devServer:{
+// 			proxy:{
+// 				'/api': {
+// 				        target: 'http://localhost:8000/', // 目标服务器地址
+// 				        secure: false, // 目标服务器地址是否是安全协议
+// 				        changeOrigin: true, // 是否修改来源, 为true时会让目标服务器以为是webpack-dev-server发出的请求!
+// 				        // '/api/login' =>    target + '/login'
+// 				        pathRewrite: {'^/api': '/'} // 将/api开头的请求地址, /api 改为 /, 即 /api/xx 改为 /xx
+// 
+// 				// '/api':{
+// 				// 	target:'http://localhost:8000/'
+// 				}
+// 			}
+// 		},
+		// Some libraries import Node modules but don't use them in the browser.
     // Tell Webpack to provide empty mocks for them so importing them works.
     node: {
       module: 'empty',

@@ -1,0 +1,13 @@
+.hplogin {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 300px;
+	min-height: 230px;
+	height: 230px;
+	background-color: #fff;
+	/* border: 1px solid #eee; */
+	overflow: hidden;
+}
+

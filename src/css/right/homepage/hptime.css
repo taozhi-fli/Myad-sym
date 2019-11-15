@@ -1,0 +1,55 @@
+.hptime{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 300px;
+	min-height: 230px;
+	height: 230px;
+	margin:5px;
+	background-color: #fff;
+	/* border: 1px solid #eee; */
+}
+
+.time-contain{
+	/* box-sizing: border-box; */
+	flex: 1;
+	display: flex;
+	text-align: center;
+	/* padding:30px 10px; */
+}
+.time-show{
+	flex: 3;
+	/* border: 1px solid #666; */
+	border-radius: 5px;
+	height: 80%;
+	line-height:50px ;
+	font-size: 26px;
+	box-shadow: 0 0 2px 0 #888;
+	background-color: #fff;
+}
+.time-point{
+	flex: 2;
+	line-height:60px ;
+	font-size: 30px;
+	/* box-shadow: 0 0 2px 0 #888; */
+}
+
+.day-contain{
+	flex: 2;
+	box-shadow: 0 0 2px 0 #888;
+	text-align:center;
+}
+
+.day-YM{
+	height: 30%;
+	background-color: #CCCCCC;
+	font-size: 20px;
+	line-height: 40px;
+}
+.day-D{
+	height: 70%;
+}
+.day-D-top{
+	font-size: 50px;
+	color:royalblue;
+}

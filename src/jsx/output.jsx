@@ -13,10 +13,10 @@ class Output extends React.Component{
 		super(props)
 	}
 	render(){	 
-		 
-		if(!store.getState()){
-			window.location.href = "http://localhost:3000/?#/Login"
-		}
+		//  如果用户未登录,强制跳转到Login登陆界面
+		// if(!store.getState()){
+		// 	window.location.href = "http://localhost:3000/?#/Login"
+		// }
 		return (
 		<HashRouter>
 			<Switch>
