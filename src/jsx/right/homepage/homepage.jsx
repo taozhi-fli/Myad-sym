@@ -9,22 +9,16 @@ import HPdollar from './hp-jine.jsx'
 import HPlogin from './hp-denglujilu.jsx'
 
 
-class Homepage extends React.Component{
-	constructor(props){
-		super(props);
-	}
+function Homepage(){
+	return (
+				<div class="hp-main">
+					<HPTime />
+					<HPdollar />
+					<HPlogin />
+					<HPnew />
+					<HPpop />
+				</div>
+			)
 	
-	render(){
-		return (
-			<div class="hp-main">
-				<HPTime />
-				<HPdollar />
-				<HPlogin />
-				<HPnew />
-				<HPpop />
-			</div>
-		)
-	}
 }
-
 export default Homepage;

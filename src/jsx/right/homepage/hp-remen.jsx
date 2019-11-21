@@ -1,4 +1,5 @@
 import React from 'react'
+import echarts from 'echarts'
 
 import '@src/css/right/homepage/hppop.css'
 
@@ -33,7 +34,7 @@ class HpRemen extends React.Component{
 	
 	render(){
 		return (
-			<div className="hppop">
+			<div>
 				<div className="hppop-title"> 热门产品 </div>
 				<div className="hppop-body">
 					<div className="hppop-body-title" onClick={this.changelist}>
@@ -94,4 +95,103 @@ class HpRemen extends React.Component{
 	}
 }
 
-export default HpRemen
+class Remenpicline extends React.Component{
+	constructor(props){
+		super(props)
+	}
+	
+	componentDidMount(){
+		this.showechartline()
+	}
+	
+	showechartline(){
+		echarts.init(document.getElementById('hpremenline')).setOption({
+			  title: {
+			        text: 'A',
+			        subtext: '纯属虚构'
+			    },
+			    tooltip: {
+			        trigger: 'axis'
+			    },
+			    legend: {
+			        data:['typeA','typeB','typeC','typeD']
+			    },
+			    toolbox: {
+			        show: false,
+			        feature: {
+			            magicType: {show: true, type: ['stack', 'tiled']},
+			            saveAsImage: {show: true}
+			        }
+			    },
+			    xAxis: {
+			        // type: 'category',
+			        boundaryGap: false,
+			        data: ['周一','周二','周三','周四','周五','周六','周日']
+			    },
+			    yAxis: {
+			        type: 'value'
+			    },
+			    series: [{
+			        name: 'typeA',
+			        type: 'line',
+			        smooth: true,
+			        data: [10, 12, 21, 54, 260, 830, 710]
+			    },
+			    {
+			        name: 'typeB',
+			        type: 'line',
+			        smooth: true,
+			        data: [30, 182, 434, 791, 390, 30, 10]
+			    },
+			    {
+			        name: 'typeC',
+			        type: 'line',
+			        smooth: true,
+			        data: [1320, 1132, 601, 234, 120, 90, 20]
+			    },{
+							name:'typeD',
+							type:'line',
+							smooth:true,
+							data:[200,10,512,48,50,318,12,48]
+					}]
+		})
+	}
+	
+	render(){
+		return(
+		<div id="hpremenline" style={{width:'100%',height:'100%'}}></div>
+		)
+	}
+}
+
+class Remenout extends React.Component{
+	constructor(props){
+		super(props);
+		this.state = {
+			what:false
+		}
+	}
+	
+	changeshow(){
+		this.setState({
+			what:!this.state.what
+		})
+	}
+	
+	render(){
+		let showwhat;
+		if(this.state.what){
+			showwhat =	<HpRemen />
+		}else{
+			showwhat = <Remenpicline />
+		}
+		return(
+		<div className="hppop">
+			<div onClick={this.changeshow.bind(this)}>点击切换</div>
+			{showwhat}
+		</div>
+		)
+	}
+}
+
+export default Remenout

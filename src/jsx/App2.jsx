@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {HashRouter,Route,Link,Switch} from 'react-router-dom'
+// import ReactDOM from 'react-dom';
+import {HashRouter,Route,Switch} from 'react-router-dom'
 
 import Top from './top/index.jsx';
 import Left from './left/index.jsx';

@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {HashRouter,Route,Link} from 'react-router-dom'
+// import ReactDOM from 'react-dom';
+import {HashRouter,Route} from 'react-router-dom'
 
 import Top from './top/index.jsx';
 import Left from './left/index.jsx';
 import Main from './right/index.jsx';
 
-import Login from './Login.jsx'
+// import Login from './Login.jsx'
 
-import store from '../store/store.js'
+// import store from '../store/store.js'
 
 import '../css/main.css'
 import '../JS/commen.js'

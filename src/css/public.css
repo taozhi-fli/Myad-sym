@@ -1,0 +1,16 @@
+	/* 遮挡栏---mask */
+	.mask {
+		background-color: rgba(68, 68, 68, 0.33);
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  right: 0;
+	  left: 0;
+		z-index: 10;
+	}
+	
+	/* 鼠标在其上增加下划线 */
+	.hoverudl:hover{
+		text-decoration: underline;
+		cursor: pointer;
+	}

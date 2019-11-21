@@ -2,8 +2,12 @@ import { createStore } from 'redux'
 
 const reducer = function(state = [],action){
 	console.log(789)
-	if(action.type == 'LOGIN'){
+	if(action.type === 'LOGIN'){
 		// store.setState(Action(action))
+		let flag = state.some((i)=>{
+			return i.type === 'LOGIN'
+		})
+		if(flag) return ;
 		return [...state,action]
 	}
 }

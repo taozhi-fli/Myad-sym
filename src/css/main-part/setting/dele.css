@@ -1,0 +1,10 @@
+	.change-mask-del-inner {
+		position:absolute;
+		top:10%;
+		left:50%;
+		margin-left:-200px;
+		width:400px;
+		height:200px;
+		background-color:#fff;
+		padding:40px 50px;
+	}

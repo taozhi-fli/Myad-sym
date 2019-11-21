@@ -1,0 +1,52 @@
+.inner {
+	display: flex;
+	padding: 20px;
+	flex-direction:column;
+	position:relative;
+	height:100%;
+}
+.userinfo {
+	margin: 20px;
+	padding:50px;
+	background-color:#fff;
+	border-radius:15px;
+}
+.accountinfo {
+	background-color:#fff;
+	border-radius:15px;
+	padding:10px;
+	margin: 20px;
+}
+.ulflex {
+	display:flex;
+	margin:0;
+}
+.li {
+	list-style : none;
+	line-height : 40px;
+	margin:0 20px;
+}
+.changePassword {
+	position:absolute;
+	top:20%;
+	left:50%;
+	margin-left:-200px;
+	width:400px;
+	height:200px;
+	background-color:#fff;
+	padding:40px 50px;
+}
+.mask {
+	background-color: rgba(68, 68, 68, 0.33);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.label {
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:10px;
+	color:#444;
+}

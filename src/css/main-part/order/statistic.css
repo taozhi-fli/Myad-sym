@@ -1,0 +1,23 @@
+.or-stc{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+}
+
+
+.or-stc-sale{
+	width: 48%;
+	background-color: #fff;
+}
+
+.or-stc-refen{
+	width: 48%;
+	background-color: #fff;
+}
+
+.or-stc-all{
+	width: 90%;
+	background-color: #fff;
+}

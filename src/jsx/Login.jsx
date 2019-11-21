@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 
 import '../css/login.css'
 
@@ -7,12 +7,18 @@ import store from '../store/store.js'
 
 function uandp(user,password){
 	// console.log(123)
-	if(user === 'admin' && password == '123456'){
+	if(user === 'admin' && password === '123456'){
 		// console.log(456)
 		store.dispatch({
 			type:'LOGIN',
 			user:user
 		})
+		
+		//尝试  使用session浏览器保存
+		// sessionStorage.setItem('login',true)
+		localStorage.setItem('login',true);
+		localStorage.setItem('user','admin')
+		
 		document.getElementById('username').value = '';
 		document.getElementById('password').value = '';
 	}
@@ -27,19 +33,16 @@ class Login extends React.Component{
 		let user = document.getElementById('username').value;
 		let password = document.getElementById('password').value;
 		uandp(user,password)
-		// console.log(store.getState())
-		// let xml = new XMLHttpRequest();
-		// xml.open('GET','http://localhost:3000/user.json',true);
-		// xml.send();
-		// console.log(123)
-		// xml.onreadystatechange = function(){
-		// 	console.log(xml)
-		// 	if(xml.readyState == 4&&xml.status == 200){
-		// 		console.log(123)
-		// 	}
-		// }
-		
+
+	// 登陆的时候 记录当前时间  并保存 登录记录
+	console.log(new Date())
+		store.dispatch({
+			
+		})
 	}
+	
+	
+	
 	
 	render(){
 		return (

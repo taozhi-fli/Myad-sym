@@ -1,0 +1,35 @@
+.gsindex{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid #444;
+}
+
+.gsindex-title{
+	border-bottom: 1px solid #444;
+}
+
+.gsindex-content{
+	height: 100%;
+	overflow: scroll;
+	display: grid;
+	grid-template-columns:repeat(auto-fill, minmax(170px,250px));
+	justify-content:space-around;
+}
+
+.gsindex-content::-webkit-scrollbar{
+	width:0;
+}
+
+.sdd{
+	border: 1px solid #5e0;
+	height: 150px;
+	margin: 20px 0;
+}
+
+.sdd img{
+	width: 100%;
+	height: 100%;
+	max-width:250px;
+	max-height: 150px;
+}

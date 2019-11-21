@@ -17,7 +17,7 @@ import axios from 'axios'
  export function ax(config){
 	 const inst = axios.create({
 		 // baseURL : 'http://localhost:8000/',
-		  baseURL :process.env.BASE_API,
+		 baseURL :process.env.BASE_API,
 		 timeout:5000,
 		 withCredentials: true
 	 })

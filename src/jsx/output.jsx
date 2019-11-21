@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import {HashRouter,Route,Link,Switch,Redirect} from 'react-router-dom'
 
 import App from './App.jsx';
@@ -13,8 +13,10 @@ class Output extends React.Component{
 		super(props)
 	}
 	render(){	 
-		//  如果用户未登录,强制跳转到Login登陆界面
+		//如果用户未登录,强制跳转到Login登陆界面
 		// if(!store.getState()){
+		// console.log(localStorage.getItem('login'),'-------LLLL')
+		// // if(!localStorage.getItem('login')){
 		// 	window.location.href = "http://localhost:3000/?#/Login"
 		// }
 		return (

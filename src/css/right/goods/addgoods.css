@@ -1,0 +1,94 @@
+.addgoods{
+	width: 100%;
+	/* height: 100%; */
+	background-color: #fff;
+	border: 1px solid #e3e3e3;
+	padding: 10px;
+}
+
+.addgoods form{
+	width: 70%;
+	margin: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0;
+}
+.addg-base{
+	flex: 1;
+	display: flex;
+}
+.addg-base-input{
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+}
+.addg-base-image{
+	flex: 1;
+}
+.addg-more{
+	flex: 1;
+	display: flex;
+}
+.addgoodsitem{
+	flex: 1;
+}
+.add-gs-item-span{
+	display: inline-block;
+	width: 100px;
+	/* margin-left: 15px; */
+	font-weight: 700; 
+}
+
+
+.adg-input-item{
+	margin: 10px 0;
+}
+.adg-input-item input{
+	border-radius:2px;
+	margin: 0 25px;
+	padding: 2px 5px;
+	outline: 0;
+	border: #777 1px solid;
+}
+.adg-input-item input:focus{
+	box-shadow: 0 0 3px 0 #8b8d8f;
+}
+.addg-base-image label{
+	width: 110px;
+	height: 30px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #4169E1;
+}
+
+#gsupimg{
+	display: none;
+}
+#gsup-rep-img{
+	max-height: 200px;
+	max-wight: 200px;
+	margin-left: 20px;
+}
+
+
+.select{
+	margin: 20px;
+	width:100px;
+	height: 30px;
+	border-radius: 10px;
+	padding: 2px 5px;
+}
+
+.select:focus{
+	outline: 0;
+	box-shadow: 0 0 4px 0px #8b8d8f;
+}
+
+#gs-tear{
+	/* width: 80%; */
+	margin-right: 20px;
+	resize: none;
+}

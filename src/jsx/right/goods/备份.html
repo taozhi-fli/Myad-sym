@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- addgoods -->
+		<div className="addgoods">
+			<form>
+					<div className="addg-base">
+						<div className="addg-base-input">
+						<div className=" adg-input-item">
+						  <label htmlFor="goodsid">编号</label>
+						  <input type="text" className=" " id="goodsid" defaultValue={Math.random()} disabled/>
+						</div>
+						<div className="adg-input-item ">
+						  <label htmlFor="goodstitle">商品名称</label>
+						  <input required type="text" className=" " id="goodstitle" placeholder="名称" />
+						</div>
+						<div className="adg-input-item ">
+						  <label htmlFor="">分类</label>
+							<select class="select " onChange={this.changeselect1.bind(this)}>
+								<option>A</option>
+								<option>B</option>
+								<option>C</option>
+								<option>D</option>
+							</select>
+							<select class="select select-2nd">
+							  <option required>请选择</option>
+								{this.state.option2}
+							</select>
+						</div>
+						<div className="checkbox adg-input-item">
+							<span className="add-gs-item-span">发布栏</span>
+							
+								<label className="checkbox-inline">
+									<input type="checkbox" id="inlineCheckbox1" value="option1" /> 全场
+								</label>
+								<label className="checkbox-inline">
+									<input type="checkbox" id="inlineCheckbox2" value="option2" /> 类型2
+								</label>
+								<label className="checkbox-inline">
+									<input type="checkbox" id="inlineCheckbox3" value="option3" /> 类型3
+								</label>
+						</div>
+						<div className="adg-input-item ">
+						  <label htmlFor="oldp">商品原价</label>
+						  <input required type="number" className=" " id="oldp" placeholder="$" />
+						</div>
+						<div className=" adg-input-item">
+						  <label htmlFor="newp">活动价</label>
+						  <input required type="number" className=" " id="newp" placeholder="$" />
+						</div>
+						<div className=" adg-input-item">
+						  <label htmlFor="gstore">库存数量</label>
+						  <input required type="number" className=" " id="gstore" placeholder="数量" />
+						</div>
+					</div>
+					
+						<div  className="addg-base-image">
+							<label htmlFor="gsupimg" >点击选择图片</label>
+							<input type="file" id="gsupimg" onChange={this.showimg} accept="image/png,image/jpg,image/jpeg,image/svg"/>
+							<img src="" alt="这是选择提交的图片" id="gsup-rep-img"/>
+						</div>
+					</div>
+					
+					
+					<div className="addg-more">
+					<div className="adg-input-item ">
+					  <label htmlFor="gs-tear">备注</label>
+					</div>
+					<textarea id="gs-tear"></textarea>
+						<div>
+							<button className="btn btn-primary btn-sm" onClick={this.subgs.bind(this)}>点击提交</button>
+						</div>
+					</div>
+			</form>
+		</div>
+		
+		<!--  -->
+	</body>
+</html>
